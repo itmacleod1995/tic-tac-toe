@@ -61,6 +61,8 @@ body {
 tr, td {
     border: 2px solid white;
     padding: 40px;
+    color: white;
+    cursor: pointer;
 }
 
 main {
