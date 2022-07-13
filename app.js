@@ -34,6 +34,7 @@ document.onclick = (e) => {
         currentTurn++;
         if (check(playerX, winningCells)) {
             document.getElementById("result").textContent = "winner! Player X";
+            document.querySelector(".playerTurn").textContent = "--";
         }
     } else {
         document.querySelector(".playerTurn").textContent = "Current Player's Turn: X";
@@ -43,7 +44,9 @@ document.onclick = (e) => {
         currentTurn++;
         if (check(playerO, winningCells)) {
             document.getElementById("result").textContent = "winner! Player O";
+            document.querySelector(".playerTurn").textContent = "--";
         }
+
     }
 }
 

@@ -84,6 +84,7 @@ main {
 .playerTurn {
     color: #eee;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 td {
