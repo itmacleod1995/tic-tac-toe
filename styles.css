@@ -47,6 +47,30 @@ table {
 	border-spacing: 0;
 }
 
+h1 {
+    font-size: 48px;
+    color: #eee;
+    text-align: center;
+    padding-top: 50px;
+}
+
+body {
+    background-color: #0d1117;
+}
+
 tr, td {
     border: 2px solid white;
+    padding: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 65vh;
+}
+
+.playerTurn {
+    color: #eee;
 }
