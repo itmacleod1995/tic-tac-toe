@@ -85,3 +85,18 @@ main {
     color: #eee;
     margin-top: 10px;
 }
+
+td {
+    color: black;
+}
+
+.reveal {
+    color: white;
+}
+
+#result {
+    color: white;
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-size: 30px;
+}
