@@ -20,7 +20,12 @@ function check(playerCells, winningCells) {
 
 
                 for (let x = 0; x < winningCells[i].length; x++) {
-                    document.getElementById(winningCells[i][x] + "").style.cssText = 'background-color: yellow; color: black;';
+                    if (currentTurn % 2 == 0) {
+                        document.getElementById(winningCells[i][x] + "").style.cssText = 'background-color: yellow; color: black;';
+                    } else {
+                        document.getElementById(winningCells[i][x] + "").style.cssText = 'background-color: red; color: black;';
+                    }
+
                     //console.log(winningCells[x]);
                 }
 
@@ -46,7 +51,6 @@ document.onclick = (e) => {
         if (check(playerX, winningCells)) {
             document.getElementById("result").textContent = "winner! Player X";
             document.querySelector(".playerTurn").textContent = "--";
-            document.getElementsByTagName("table");
         }
     } else {
         document.querySelector(".playerTurn").textContent = "Current Player's Turn: X";
