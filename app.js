@@ -17,6 +17,17 @@ function check(playerCells, winningCells) {
 
             if (count === 3) {
                 //document.getElementById("result").textContent = "winner:"
+
+
+                for (let x = 0; x < winningCells[i].length; x++) {
+                    document.getElementById(winningCells[i][x] + "").style.cssText = 'background-color: yellow; color: black;';
+                    //console.log(winningCells[x]);
+                }
+
+
+                //console.log(winningCells[i]);
+
+
                 return true;
             }
         }
@@ -35,6 +46,7 @@ document.onclick = (e) => {
         if (check(playerX, winningCells)) {
             document.getElementById("result").textContent = "winner! Player X";
             document.querySelector(".playerTurn").textContent = "--";
+            document.getElementsByTagName("table");
         }
     } else {
         document.querySelector(".playerTurn").textContent = "Current Player's Turn: X";
