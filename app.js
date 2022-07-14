@@ -16,8 +16,6 @@ function check(playerCells, winningCells) {
             }
 
             if (count === 3) {
-                //document.getElementById("result").textContent = "winner:"
-
 
                 for (let x = 0; x < winningCells[i].length; x++) {
                     if (currentTurn % 2 == 0) {
@@ -25,14 +23,7 @@ function check(playerCells, winningCells) {
                     } else {
                         document.getElementById(winningCells[i][x] + "").style.cssText = 'background-color: red; color: black;';
                     }
-
-                    //console.log(winningCells[x]);
                 }
-
-
-                //console.log(winningCells[i]);
-
-
                 return true;
             }
         }
@@ -49,8 +40,7 @@ document.onclick = (e) => {
         e.target.textContent = "X";
         currentTurn++;
         if (check(playerX, winningCells)) {
-            document.getElementById("result").textContent = "winner! Player X";
-            document.querySelector(".playerTurn").textContent = "--";
+            document.querySelector(".playerTurn").textContent = "winner! Player X";
         }
     } else {
         document.querySelector(".playerTurn").textContent = "Current Player's Turn: X";
@@ -59,10 +49,8 @@ document.onclick = (e) => {
         e.target.textContent = "O";
         currentTurn++;
         if (check(playerO, winningCells)) {
-            document.getElementById("result").textContent = "winner! Player O";
-            document.querySelector(".playerTurn").textContent = "--";
+            document.querySelector(".playerTurn").textContent = "winner! Player O";
         }
-
     }
 }
 
